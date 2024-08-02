@@ -1,0 +1,97 @@
+@import '../../vars.css';
+
+.aboutContainer {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 10px;
+  width: 80%;
+  margin: 129px 10% 0 10%;
+  padding: 73px;
+  /* z-index only works on positioned elements and flex items (elements that are direct children of display:flex elements */
+  z-index: 1;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.aboutImg {
+  width: 35%;
+}
+
+.aboutItems {
+  color: var(--color-text);
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aboutItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-radius: 20px;
+  gap: 10px;
+  padding: 25px;
+  background: linear-gradient(90deg, rgba(165, 215, 232, 0.42) 0%, rgba(255, 255, 255, 0) 100%);
+  /* first value: width of the image, second value: height */
+  background-size: 0 100%;
+
+  background-repeat: no-repeat;
+  transition: background 0.4s;
+}
+
+.aboutItem:hover {
+  background-size: 100% 100%;
+}
+
+.aboutItemText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aboutItemText h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.aboutItemText p {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 830px) {
+  .aboutContainer {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .aboutImg {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 29px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

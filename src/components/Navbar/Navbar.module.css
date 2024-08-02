@@ -1,0 +1,111 @@
+@import '../../vars.css';
+
+.navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 61px;
+  z-index: 2;
+  margin: 0 10%;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 47px;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.menuItems li a,
+.menuItems li a::after,
+.menuItems li a::before {
+  transition: all 0.5s;
+}
+
+.menuItems li a {
+  position: relative;
+}
+
+.menuItems li a:hover {
+  color: #fff;
+}
+
+.menuItems li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--color-primary);
+  height: 2px;
+}
+
+.menuItems li a:hover::after {
+  width: 100%;
+}
+
+.menuBtn {
+  display: none;
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+  }
+
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: rgba(25, 55, 109);
+    /* 0 deg means to top*/
+    background: linear-gradient(0deg, rgba(25, 55, 109, 0.25) 0%, rgba(25, 55, 109, 1) 100%);
+    padding: 24px 33px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  /* Show nav links when menu button is clicked */
+  .menuOpen {
+    display: flex;
+    z-index: 1;
+  }
+}

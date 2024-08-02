@@ -1,0 +1,75 @@
+@import '../../vars.css';
+
+.contactContainer {
+  color: var(--color-text);
+  margin-top: 148px;
+  background: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 42px 10%;
+  gap: 10px;
+}
+
+.text h2 {
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.text p {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 18px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link img {
+  width: 30px;
+  height: 30px;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactContainer {
+    flex-direction: column;
+    margin-top: 79px;
+    gap: 23px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+  }
+
+  .link {
+    width: 40%;
+    gap: 24px;
+  }
+}

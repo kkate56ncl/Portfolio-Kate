@@ -1,0 +1,19 @@
+[
+  {
+    "role": "Web Development Program",
+    "organisation": "Generation Australia",
+    "startDate": "Mar, 2024",
+    "endDate": "Jun, 2024",
+    "experiences": ["Worked on component library", "Helped create UI components"],
+    "imageSrc": "history/generation.png"
+  },
+
+  {
+    "role": "Business Manager",
+    "organisation": "Beijing Sheenline",
+    "startDate": "Jan, 2020",
+    "endDate": "Aug, 2023",
+    "experiences": ["International procurement", "Brand promotion"],
+    "imageSrc": "history/sheenline.png"
+  }
+]
